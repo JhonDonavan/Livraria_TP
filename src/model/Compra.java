@@ -11,7 +11,7 @@ public class Compra {
 		
 	}
 	
-	public Compra(String observacoes, Date dataCompra, Cliente cliente){
+	public Compra(String observacoes, Date dataCompra, Cliente cliente)throws DadosException{
 		this.setCliente(cliente);
 		this.setDataCompra(dataCompra);
 		this.setObservacoes(observacoes);
@@ -21,7 +21,7 @@ public class Compra {
 		return observacoes;
 	}
 
-	public void setObservacoes(String observacoes) {
+	public void setObservacoes(String observacoes)throws DadosException{
 		Compra.validarObservacoes(observacoes);
 		this.observacoes = observacoes;
 	}
@@ -30,7 +30,7 @@ public class Compra {
 		return dataCompra;
 	}
 
-	public void setDataCompra(Date dataCompra) {
+	public void setDataCompra(Date dataCompra) throws DadosException{
 		Compra.validarDataCompra(dataCompra);
 		this.dataCompra = dataCompra;
 	}
@@ -39,24 +39,24 @@ public class Compra {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Cliente cliente) throws DadosException{
 		Compra.validarCliente(cliente);
 		this.cliente = cliente;
 	}
 	
 	
-	private static void validarCliente(Cliente cliente2) {
+	private static void validarCliente(Cliente cliente) throws DadosException{
 		// TODO Auto-generated method stub
 		
 	}
 
-	private static void validarObservacoes(String observacoes2) {
+	private static void validarObservacoes(String observacoes)throws DadosException {
 		// TODO Auto-generated method stub
 		
 	}
 	
 	
-	private static void validarDataCompra(Date dataCompra2) {
+	private static void validarDataCompra(Date dataCompra) throws DadosException{
 		// TODO Auto-generated method stub
 		
 	}
