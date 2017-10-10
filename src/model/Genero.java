@@ -1,9 +1,11 @@
 package model;
 
+import java.util.Set;
+
 public class Genero {
 	private String nome;
 	private String descricao;
-	private Livro[] livros;
+	private Set<Livro> livros;
 	
 	public Genero(){
 		
@@ -42,11 +44,11 @@ public class Genero {
 		
 	}
 
-	public Livro[] getLivros() {
+	public Set<Livro> getLivros() {
 		return livros;
 	}
 
-	public void setLivros(Livro[] livros) {
+	public void setLivros(Set<Livro> livros) {
 		this.livros = livros;
 	}
 	
